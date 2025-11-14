@@ -8,21 +8,21 @@ function Final() {
   useGSAP(() => {
     gsap.set(".final-content", { opacity: 0 });
 
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".final",
-        start: "top top",
-        end: "90% top",
-        scrub: true,
-        pin: true,
-      },
-    });
+    // gsap.timeline({
+    //   scrollTrigger: {
+    //     trigger: ".final",
+    //     start: "top top",
+    //     end: "90% top",
+    //     scrub: true,
+    //     pin: true,
+    //   },
+    // });
 
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".final",
         start: "top 80%",
-        end: "90% top",
+        end: "+=110% top",
         scrub: true,
       },
     });
