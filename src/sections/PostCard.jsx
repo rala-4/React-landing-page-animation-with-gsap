@@ -1,6 +1,26 @@
-import React from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import React, { useRef } from "react";
 
 function PostCard() {
+  const videoRef = useRef(null);
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".post-card",
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+      },
+    });
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(videoRef.current, {
+        currentTime: videoRef.current.duration,
+        duration: 3,
+        ease: "power1.inOut",
+      });
+    };
+  });
   return (
     <section className="post-card">
       <div className="animated-gradient-bg" />
