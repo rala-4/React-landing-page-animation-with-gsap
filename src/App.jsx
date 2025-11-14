@@ -5,6 +5,7 @@ import Hero from "./sections/Hero";
 import FirstVideo from "./sections/FirstVideo";
 import Jason from "./sections/Jason";
 import SecondVideo from "./sections/SecondVideo";
+import Lusia from "./sections/Lusia";
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <FirstVideo />
       <Jason />
       <SecondVideo />
+      <Lusia />
     </main>
   );
 }
